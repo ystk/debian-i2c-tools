@@ -18,6 +18,7 @@
 
 #include <Python.h>
 #include "structmember.h"
+#include <sys/ioctl.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <fcntl.h>
@@ -34,9 +35,10 @@
 
 PyDoc_STRVAR(SMBus_module_doc,
 	"This module defines an object type that allows SMBus transactions\n"
-	"on Linux hosts.  The host kernel must have I2C support, I2C device\n"
-	"interface support, and a bus adapter driver.  All of these can be\n"
-	"either built-in to the kernel, or loaded from modules.\n"
+	"on hosts running the Linux kernel.  The host kernel must have I2C\n"
+	"support, I2C device interface support, and a bus adapter driver.\n"
+	"All of these can be either built-in to the kernel, or loaded from\n"
+	"modules.\n"
 	"\n"
 	"Because the I2C device interface is opened R/W, users of this\n"
 	"module usually must have root permissions.\n");
@@ -635,7 +637,7 @@ static PyGetSetDef SMBus_getset[] = {
 static PyTypeObject SMBus_type = {
 	PyObject_HEAD_INIT(NULL)
 	0,				/* ob_size */
-	"SMBus",			/* tp_name */
+	"smbus.SMBus",			/* tp_name */
 	sizeof(SMBus),			/* tp_basicsize */
 	0,				/* tp_itemsize */
 	(destructor)SMBus_dealloc,	/* tp_dealloc */

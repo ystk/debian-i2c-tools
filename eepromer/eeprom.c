@@ -2,6 +2,7 @@
 This program is hereby placed into the public domain.
 Of course the program is provided without warranty of any kind.
 */
+#include <sys/ioctl.h>
 #include <errno.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -152,7 +153,7 @@ int main(int argc, char **argv){
 	    fprintf(stderr,"Note on pages/addresses:\n");
 	    fprintf(stderr,"\teeproms with more than 256 byte appear as if they\n");
 	    fprintf(stderr,"\twere several eeproms with consecutive addresses on the bus\n");
-	    fprintf(stderr,"\tso we might as well address several seperate eeproms with\n");
+	    fprintf(stderr,"\tso we might as well address several separate eeproms with\n");
 	    fprintf(stderr,"\tincreasing addresses....\n\n");
 	    exit(1);
 	    break;

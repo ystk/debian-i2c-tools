@@ -2,7 +2,7 @@
     copyright            : (C) by 2002-2003 Stefano Barbato
     email                : stefano@codesink.org
 
-    $Id: 24cXX.h 4495 2007-06-27 12:57:50Z khali $
+    $Id: 24cXX.h 6048 2012-04-26 10:10:22Z khali $
  ***************************************************************************/
 
 /***************************************************************************
@@ -15,7 +15,7 @@
  ***************************************************************************/
 #ifndef _24CXX_H_
 #define _24CXX_H_
-#include <linux/i2c-dev.h>
+#include <linux/types.h>
 
 #define EEPROM_TYPE_UNKNOWN	0
 #define EEPROM_TYPE_8BIT_ADDR	1

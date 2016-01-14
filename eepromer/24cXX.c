@@ -2,7 +2,7 @@
     copyright            : (C) by 2002-2003 Stefano Barbato
     email                : stefano@codesink.org
 
-    $Id: 24cXX.c 4230 2006-11-10 09:22:12Z khali $
+    $Id: 24cXX.c 6228 2014-02-20 08:37:15Z khali $
  ***************************************************************************/
 
 /***************************************************************************
@@ -18,6 +18,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <linux/fs.h>
+#include <linux/i2c-dev.h>
 #include <sys/types.h>
 #include <sys/ioctl.h>
 #include <errno.h>

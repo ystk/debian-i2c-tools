@@ -1,6 +1,60 @@
 i2c-tools CHANGES
 -----------------
 
+3.1.1 "Happy Birthday Pollux" (2014-02-20)
+  decode-dimms: Decode module configuration type of DDR2 SDRAM
+                Decode bus width extension of DDR3 SDRAM
+                Don't choke when no EEPROM is found
+                Update manufacturer IDs
+                Remove duplicate "ns" in SDR timings
+                Fix decoding of SDR SPD revision
+                Prevent hang on reserved DDR3 module type
+                Decode more DDR3 module types
+                Fix DDR3 tRAS decoding
+                Fix DDR3 core timings rounding
+                Round down PC3 numbers to comply with Jedec
+                Encode "degrees" to HTML degree symbol
+                Add a manual page
+  decode-vaio: Add a manual page
+  eeprog: Add a manual page
+  eeprom: Add a manual page
+  eepromer: Add a manual page
+  i2cdetect: Clarify the SMBus commands used for probing by default
+  i2c-dev.h: Minimize differences with kernel flavor
+  i2c-stub-from-dump: Be more tolerant on input dump format
+  py-smbus: Fix module level docs
+
+3.1.0 (2011-12-04)
+  decode-dimms: Decode module configuration type of DDR SDRAM
+                Decode refresh rate of DDR SDRAM
+                Add support for the at24 kernel driver
+  i2c-dev.h: Make value arrays const for block write functions
+  i2cset: Add support for SMBus and I2C block writes
+          Removed obsolete method to specify value mask
+          More stringent parameter validation
+
+3.0.3 (2010-12-12)
+  Makefile: Let the environment set CC and CFLAGS
+            Integrate py-smbus into the build system
+  README: Point users to the linux-i2c mailing list
+  decode-dimms: Handle CRC of FB-DIMM and DDR3 SDRAM memory modules
+                Add support for DDR3 SDRAM
+                Fix decoding of SDR SDRAM bytes 12-14
+                Add side-by-side formatting option
+                Add merged cells formatting option
+                Try harder to decode the manufacturing date
+                Handle read errors on sysfs
+                Decode voltage interface level of DDR SDRAM
+  decode-xeon: Delete
+  eepromer: Fix array initialization overrun
+  i2cdetect: Drop legacy reference to ISA bus
+  i2cset: Add support for short writes with PEC
+  i2c-stub-from-dump: Use udev settle to speed up initialization
+                      Unload i2c-stub automatically if needed
+                      Add support for multiple dumps
+  tools: Properly handle /dev/i2c not being a directory
+         Increase limit on I2C bus number
+
 3.0.2 (2008-11-29)
   i2c-dev.h: Drop I2C_FUNC_SMBUS_*I2C_BLOCK_2 defines
   decode-dimms: Add support for little-endian word hexdumps
